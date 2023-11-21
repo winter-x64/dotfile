@@ -1,3 +1,8 @@
+# Helix Editor Configuration
+
+helix is a terminal based txt editor
+
+```toml
 theme = "base16_transparent"
 
 [editor]
@@ -26,3 +31,4 @@ left = ["mode", "spinner"]
 center = ["file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = "│"
+```

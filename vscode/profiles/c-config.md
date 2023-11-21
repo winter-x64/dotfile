@@ -1,3 +1,6 @@
+# C / C++ Profile for vscode
+
+```json
 {
   "tabnine.experimentalAutoImports": true,
   "editor.fontFamily": "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace ",
@@ -122,3 +125,4 @@
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 3000
 }
+```

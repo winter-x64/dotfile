@@ -1,3 +1,6 @@
+# Starship configuration
+
+```toml
 scan_timeout = 10
 command_timeout = 2000
 add_newline = true
@@ -20,10 +23,10 @@ vicmd_symbol = "[❮](green)"
 [time]
 disabled = false
 time_format = "%I:%M %p"
-use_12hr = true 
+use_12hr = true
 style = "bold white"
 format = "[󰄉 $time]($style)"
- 
+
 [fill]
 #symbol = "─"
 #symbol = "-"
@@ -114,3 +117,5 @@ version_format = "v${raw}"
 [c]
 symbol = " "
 format = "[$symbol$version](bold yellow)  "
+
+```
