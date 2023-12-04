@@ -14,7 +14,9 @@ usage:
     "[Community Material Theme Darker High Contrast]": {
       "activityBarBadge.background": "#6366f1",
       "editorGroupHeader.tabsBackground": "#181818",
-
+      "quickInput.foreground": "#ffffff",
+      "quickInputList.focusBackground": "#6366f1",
+      "quickInputList.focusIconForeground": "#ffffff",
       "activityBarBadge.foreground": "#ffffff",
       "activityBar.activeBorder": "#6366f1",
       "list.activeSelectionForeground": "#ffffff",
