@@ -209,3 +209,81 @@ format = "[$symbol($version )( $tfm )]($style)  "
 style = "bold blue"
 heuristic = false  
 ```
+
+
+## New Version
+
+```toml
+# ~/.config/starship.toml
+
+add_newline = true
+command_timeout = 1000
+format = """$os$username$directory$git_branch$git_status$fill$python$line_break\
+$character"""
+
+
+# ---
+
+[os]
+format = '[$symbol](bold white) '
+disabled = false
+
+[os.symbols]
+Windows = ' '
+Ubuntu = ''
+Macos = '󰀵'
+
+[fill]
+symbol = " "
+
+# ---
+
+# Shows the username
+[username]
+style_user = 'blue bold'
+style_root = 'black bold'
+format = '[$user]($style) '
+disabled = false
+show_always = true
+
+
+# Shows current directory
+[directory]
+truncation_length = 1
+truncation_symbol = " "
+home_symbol = ' home'
+read_only_style = '197'
+read_only = '  '
+format = 'at [$path]($style)[$read_only]($read_only_style) '
+
+# Shows current git branch
+[git_branch]
+symbol = ' '
+format = 'on [$symbol$branch]($style)'
+style = 'bold purple'
+
+# Shows current git status
+[git_status]
+format = '([ \( $all_status$ahead_behind\)]($style) )'
+style = 'bold green'
+conflicted = '[ confliced=${count}](red) '
+up_to_date = '[󰘽 up-to-date](bold green) '
+untracked = '[󰋗 untracked=${count}](red) '
+ahead = ' ahead=${count}'
+diverged = ' ahead=${ahead_count}  behind=${behind_count}'
+behind = ' behind=${count}'
+stashed = '[ stashed=${count}](green) '
+modified = '[󰛿 modified=${count}](yellow) '
+staged = '[󰐗 staged=${count}](green) '
+renamed = '[󱍸 renamed=${count}](yellow) '
+deleted = '[󰍶 deleted=${count}](red) '
+
+[python]
+symbol = " "
+format = '[$symbol$version( \[ $virtualenv \]) ]($style)'
+style = "bold green"
+pyenv_prefix = "venv"
+python_binary = ["./venv/bin/python", "python", "python3", "python2"]
+detect_extensions = ["py"]
+version_format = "v${raw}"
+```
